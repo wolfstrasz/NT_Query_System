@@ -1,0 +1,4 @@
+Firstly, when we input a statement of the type <P, is, a, Ns, Ns> where the first Ns can also be an Adjective for example: John is a purple duck. It will recognise purple as the color (Noun) and will skip the next noun. In order to overcome this problem we can add a checker inside statements.process_statement().
+Another problem is that we do not distinguish between 'an' and 'a' for nouns.
+Also, another improvement we can make is in verb_stem and noun_stem. Our current rules for verb_stem consider the simple verb construction "stem" + "3s' part", but does not consider if the verb is constructed by "prefix" + "stem" + "sufix" + "3s' part", thus skipping words like unties. For noun_stem we do not have enough rules to cover words that in singular form end in "oe" like canoe, shoe, foe, thus using them as cano,sho,fo.
+Last improvement we can make is to extend our grammar to cover statements including "and".
